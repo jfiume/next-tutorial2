@@ -1,9 +1,13 @@
-// import cowsay from 'cowsay-browser'
+import Head from 'next/head'
 
 export default () =>
-  <div>Welcome to next.js!</div>
-
-// export default () =>
-//   <pre>
-//     {cowsay.say({ text: 'hi there!' })}
-//   </pre>
+  <div>
+    <Head>
+      <title>My page title</title>
+      <meta name="viewport" content="initial-scale=1.0" width="device-width" key="viewport" />
+    </Head>
+    <Head>
+      <meta name="viewport" content="inital-scale=1.2" width="device-width" key="viewport"></meta>
+    </Head>
+    <p>Hello world!</p>
+  </div>
