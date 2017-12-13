@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default () =>
   <div>
@@ -10,4 +11,11 @@ export default () =>
       <meta name="viewport" content="inital-scale=1.2" width="device-width" key="viewport"></meta>
     </Head>
     <p>Hello world!</p>
+    <div>
+      Click{' '}
+      <Link href="/about">
+        <a>here</a>
+      </Link>{' '}
+      to read more
+    </div>
   </div>
