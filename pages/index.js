@@ -21,3 +21,18 @@ const handler = () =>
     pathname: '/about',
     query: { name: 'Zeit' }
   })
+
+Router.onRouteChangeStart = url => {
+  console.log('App is changing to: ', url);
+}
+
+Router.onRouteChangeError = (err, url) => {
+  if (err.cancelled) {
+    console.log(`Route to ${url} was cancelled`);
+  }
+}
+
+Router.onAppUpdated = nextUrl => {
+  // persist the local state
+  location.href = nextUrl
+}
