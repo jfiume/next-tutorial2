@@ -13,7 +13,7 @@ export default () =>
     <p>Hello world!</p>
     <div>
       Click{' '}
-      <Link href="/about">
+      <Link href={{ pathname: '/about', query: { name: 'Zeit' }}}>
         <a>here</a>
       </Link>{' '}
       to read more
