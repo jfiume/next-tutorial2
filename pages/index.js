@@ -16,6 +16,7 @@ export default () =>
     </div>
   </div>
 
+
 const handler = () =>
   Router.push({
     pathname: '/about',
@@ -36,3 +37,12 @@ Router.onAppUpdated = nextUrl => {
   // persist the local state
   location.href = nextUrl
 }
+
+const href = '/?counter=10'
+const as = href
+Router.push(href, as, { shallow: true })
+
+// componentWillReceiveProps(nextProps) {
+//   const { pathname, query } = nextProps.url
+//   // fetch data based on the new query
+// }
