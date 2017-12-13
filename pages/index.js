@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Router from 'next/router'
 
 export default () =>
   <div>
@@ -10,12 +11,7 @@ export default () =>
     <Head>
       <meta name="viewport" content="inital-scale=1.2" width="device-width" key="viewport"></meta>
     </Head>
-    <p>Hello world!</p>
     <div>
-      Click{' '}
-      <Link href="/about">
-        <img src="/static/my-image.jpg" />
-      </Link>{' '}
-      to read more
+      Click <span onClick={() => Router.push('/about')}>here</span> to read more
     </div>
   </div>
