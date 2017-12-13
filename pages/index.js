@@ -12,6 +12,12 @@ export default () =>
       <meta name="viewport" content="inital-scale=1.2" width="device-width" key="viewport"></meta>
     </Head>
     <div>
-      Click <span onClick={() => Router.push('/about')}>here</span> to read more
+      Click <span onClick={handler}>here</span> to read more
     </div>
   </div>
+
+const handler = () =>
+  Router.push({
+    pathname: '/about',
+    query: { name: 'Zeit' }
+  })
